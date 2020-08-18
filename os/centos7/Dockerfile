@@ -29,7 +29,7 @@ RUN date \
 # Config
 RUN [ ! -d /etc/docker ] && mkdir /etc/docker
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo -e '{\n    "registry-mirrors": ["http://f1361db2.m.daocloud.io"]\n}\n' > /etc/docker/daemon.json \
+    && echo -e '{\n    "registry-mirrors": ["https://05f073ad3c0010ea0f4bc00b7105ec20.mirror.swr.myhuaweicloud.com"]\n}\n' > /etc/docker/daemon.json \
     && echo -e "\nUseDNS no\nGSSAPIAuthentication no\n" >> /etc/ssh/sshd_config
 
 # patch
